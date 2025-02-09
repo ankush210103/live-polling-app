@@ -4,7 +4,7 @@
   "description": "This is a live polling app.",
   "main": "index.js",
   "dependencies": {
-    "bcrypt": "^4.0.1",
+    "bcrypt": "^5.1.1",
     "body-parser": "^1.19.0",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
@@ -36,24 +36,21 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/avinash0786/LivePollApp.git"
+    "url": "git+https://github.com/ankush210103/live-polling-app.git"
   },
-  "author": "https://github.com/avinash0786/",
+  "author": "https://github.com/ankush210103/",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/avinash0786/LivePollApp/issues"
+    "url": "https://github.com/ankush210103/live-polling-app/issues"
   },
-  "homepage": "https://github.com/avinash0786/LivePollApp#readme",
+  "homepage": "https://github.com/ankush210103/live-polling-app#readme",
   "contributors": [
+    
     {
-      "name": "Rahul Ray",
-      "email": "rahulray1532@gmail.com",
-      "url": "https://github.com/rahulray1406"
-    },
-    {
-      "name": "Tarun Rana",
-      "email": "tarunrana0222@gmail.com",
-      "url": "https://github.com/tarunrana0222"
+      "name": "Ankush Kumar",
+      "email": "ankush.kumar@lpu.in",
+      "url": "https://github.com/ankush210103"
     }
+    
   ]
 }
