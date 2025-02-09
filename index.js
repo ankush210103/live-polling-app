@@ -36,7 +36,7 @@ app.set("view engine", "hbs");
 
 // ✅ Middleware
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(express.static(path.join(__dirname, "./public")));
+app.use(express.static(path.join(__dirname, "public")));
 
 // ✅ Check if user has already polled
 const checkPolled = (req, res, next) => {
@@ -202,6 +202,26 @@ app.get("/search", async (req, res) => {
     res.status(500).send("Error searching polls");
   }
 });
+
+
+// ✅ Delete Poll
+app.delete("/deletePoll", async (req, res) => {
+  const pollName = req.query.name;
+  if (!pollName) return res.status(400).json({ success: false, message: "Poll name is required" });
+
+  try {
+    const result = await poll.deleteOne({ name: pollName }); // ✅ Fixed here
+    if (result.deletedCount > 0) {
+      res.json({ success: true });
+    } else {
+      res.status(404).json({ success: false, message: "Poll not found" });
+    }
+  } catch (error) {
+    console.error("Error deleting poll:", error);
+    res.status(500).json({ success: false, message: "Server error" });
+  }
+});
+
 
 // ✅ Start Server
 const PORT = process.env.PORT || 3000;
