@@ -1,0 +1,35 @@
+<script src="/scripts/dashboard.js"></script>
+
+    <div class="container-fluid bg-dark text-white d-flex flex-column p-5">
+        <div class="container p-5 d-flex flex-column align-items-center
+                justify-content-center">
+            <h1>Top 5 Polls <img src="/check-square (1).svg" alt=""></h1>
+            <div class="list-group bg-dark text-light p-5" style="width:
+                    540px;min-width: 50px;">
+
+                {{#each poll}}
+                <a href="/pollfor?name={{this.name}}" class="list-group-item p-3
+                        list-group-item-action active
+                        bg-dark text-light"> {{this.topic}}
+
+                    <span style="font-size:smaller;" class="badge
+                            badge-sm
+                            bg-success rounded-pill">{{this.totalPolls}}</span>
+
+                    <button type="button" style="float:right; margin-left: 20px; width: 80px;
+                            padding: 5px;" class="btn
+                            btn-sm
+                            btn-light">Poll</button>
+                </a>
+                {{/each}}
+
+            </div>
+        </div>
+
+
+        <br><br>
+        {{>bottom}}
+    </div>
+
+
+</body>

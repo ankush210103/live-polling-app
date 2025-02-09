@@ -1,0 +1,59 @@
+.tabs {
+  display: inline-block;
+  width: 600px;
+  height: 400px;
+  flex-direction: column;
+  background-color: aqua;
+  margin-right: 50px;
+  float: left;
+  box-shadow: 6px 10px 20px 5px #909190;
+}
+.live_tabs {
+  display: inline-block;
+  width: 800px;
+  height: 500px;
+  flex-direction: column;
+  background-color: aqua;
+  margin-left: 170px;
+  box-shadow: 6px 10px 20px 5px #909190;
+}
+
+.alltabs {
+  max-width: 1344;
+  margin-left: 100px;
+  margin-top: 30px;
+  height: auto;
+}
+.container1 {
+  height: 100%;
+  width: 100%;
+  background-color: aquamarine;
+}
+.centered {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin: auto;
+  padding: 100px;
+}
+.container2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+}
+.content {
+  display: flex;
+  width: 100%;
+  max-width: 700px;
+  max-height: 400px;
+  background-color: rgba(253, 253, 253, 0.89);
+  padding: 40px;
+  flex-direction: column;
+}
+.forinput {
+  font-size: 22px;
+  height: 25px;
+  width: 25px;
+}
