@@ -35,6 +35,7 @@ app.engine("hbs", hbs.engine);
 app.set("view engine", "hbs");
 
 // ✅ Middleware
+app.use(express.static('public'));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, "public")));
 
